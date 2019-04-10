@@ -14,12 +14,8 @@ const Hero = () => (
     <Container css={css ` display: flex; flex-direction: row; `}>
       <h1
         css={css ` position: relative; z-index: 5; line-height: 1.25; margin: 0;text-align: left;direction: rtl;max-width: ${rhythm(10)}; `}>
-        فقط انجامش بده !
+        علیرضا محمودی
       </h1>
-      <img
-        css={css `height: 300px; position: relative;bottom: 112px; `}
-        alt="just do it"
-        src={"images/jdi.png"}/>
     </Container>
     <div css={css ` height: 50px; overflow: hidden; `}/>
   </section>

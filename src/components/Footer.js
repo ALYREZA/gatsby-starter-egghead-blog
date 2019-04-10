@@ -10,7 +10,7 @@ const Footer = ({author, noSubscribeForm}) => (
     <Container css={css ` padding-top: 0; ${bpMaxSM} { padding-top: 0; } `}>
       {!noSubscribeForm && (
         <div>
-          <SubscribeForm/>
+          {/* <SubscribeForm/> */}
           <br/>
           <br/>
         </div>
