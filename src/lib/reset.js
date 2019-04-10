@@ -1,14 +1,14 @@
-import { css } from '@emotion/core'
+import {css} from '@emotion/core'
 import theme from '../../config/theme'
-import typography, { fonts } from '../lib/typography'
+import typography, {fonts} from '../lib/typography'
 
-const reset = css`
+const reset = css `
 form {
   margin: 0;
 }
 ul, ol {
   list-style-position: inside;
-  margin-left: 0;
+  margin-right: 0;
   font-size: ${typography.baseFontSize};
 }
 *,
@@ -18,7 +18,7 @@ ul, ol {
   }
   html,
   body {
-    font-family: ${fonts.regular}, sans-serif;
+    font-family: Shabnam, ${fonts.regular}, sans-serif;
     font-style: normal;
     padding: 0;
     margin: 0;
@@ -65,11 +65,10 @@ ul, ol {
   }
 
   blockquote {
-    border-left: 5px solid ${theme.colors.link_color};
-    padding-left: 1rem !important;
-    margin-left: 0 !important;
+    border-right: 5px solid ${theme.colors.link_color};
+    padding-right: 1rem !important;
     margin-right: 0 !important;
-    font-style: italic;
+    margin-left: 0 !important;
     p {
       line-height: 1.3 !important;
     }
@@ -78,6 +77,8 @@ ul, ol {
     outline: none !important;
   }
   pre {
+    direction: ltr;
+    text-align: left;
     margin-top: 0;
     margin-bottom: 1rem;
     overflow: auto;
@@ -113,7 +114,7 @@ ul, ol {
     caption-side: bottom;
   }
   th {
-    text-align: left;
+    text-align: right;
   }
   label {
     display: inline-block;
