@@ -40,7 +40,7 @@
     "gatsby-transformer-remark": "^2.3.8",
     "gatsby-transformer-sharp": "^2.1.17",
     "mdx-utils": "0.0.2",
-    "netlify-cms": "^2.9.1",
+    "netlify-cms": "^2.9.2-beta.0",
     "polished": "^2.3.3",
     "prism-react-renderer": "^0.1.6",
     "prism-themes": "^1.1.0",
