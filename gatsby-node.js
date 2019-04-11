@@ -137,8 +137,8 @@ const createPaginatedPages = (createPage, edges, pathPrefix, context) => {
 }
 
 exports.onCreateNode = ({node, getNode, actions}) => {
-  const {createNodeField} = actions
   fmImagesToRelative(node);
+  const {createNodeField} = actions
   if (node.internal.type === `Mdx`) {
     const parent = getNode(node.parent)
     const titleSlugged = _.join(_.drop(parent.name.split('-'), 3), '-')
