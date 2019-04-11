@@ -78,7 +78,7 @@ export const pageQuery = graphql `query {site {
           }
         }
         frontmatter {
-          title date(formatString : "MMMM DD, YYYY")description banner {
+          title date(formatString : "MMMM DD, YYYY") description banner {
             childImageSharp {
               sizes(maxWidth : 720) {
                 ...GatsbyImageSharpSizes

@@ -12,15 +12,13 @@ module.exports = {
     title: config.siteTitle,
     twitterHandle: config.twitterHandle,
     description: config.siteDescription,
-    keywords: ['Video Blogger'],
+    keywords: ['Alyreza Mahmoudy Blogger Programmer'],
     canonicalUrl: config.siteUrl,
     image: config.siteLogo,
     author: {
       name: config.author,
       minibio: `
-        <strong>egghead</strong> is the premier place on the internet for 
-        experienced developers to enhance their skills and stay current
-        in the fast-faced field of web development.
+        <strong>A13Y</strong> is the abbreviation of Alyreza Mahmoudy or number of words between A till Y.
       `
     },
     organization: {
@@ -59,7 +57,8 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of the content container
               // as this plugin uses this as the base for generating different widths of each
               // image.
-              maxWidth: 590
+              maxWidth: 590,
+              maxHeight: 500
             }
           }
         ]
