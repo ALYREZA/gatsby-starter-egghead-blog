@@ -2,8 +2,7 @@ backend:
   name: git-gateway
   branch: master
 publish_mode: editorial_workflow
-media_folder: "static/images/uploads"
-public_folder: "/images/uploads"
+media_folder: "/images"
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
@@ -17,5 +16,4 @@ collections:
       - {label: "published", name: "published", widget: "boolean", default: true}
       - {label: "Author", name: "author", widget: "string", default: "Alyreza"}
       - {label: "banner", name: "thumbnail", widget: "image"}
-      - {label: "body", name: "rating", widget: "number"}
       - {label: "Body", name: "body", widget: "markdown"}
