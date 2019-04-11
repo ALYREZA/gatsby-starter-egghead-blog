@@ -35,7 +35,6 @@ export default function Index({
       site={site}
       headerColor={theme.colors.white}
       headerBg={theme.brand.primary}>
-      <Hero/>
       <Container css={css ` padding-bottom: 0; `}>
         {allMdx
           .edges
@@ -56,7 +55,7 @@ export default function Index({
             </div>
           ))}
         <Link to="/blog" aria-label="Visit blog page" className="button-secondary">
-          View all articles
+          دیدن همه‌ی مطلب‌ها
         </Link>
         <hr/>
       </Container>
