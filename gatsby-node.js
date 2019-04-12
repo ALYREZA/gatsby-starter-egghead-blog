@@ -171,7 +171,6 @@ exports.onCreateNode = ({node, getNode, actions}) => {
           .split(' ')[0]
         : ''
     })
-
     createNodeField({name: 'banner', node, value: node.frontmatter.banner})
 
     createNodeField({

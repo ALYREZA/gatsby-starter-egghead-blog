@@ -45,11 +45,17 @@ module.exports = {
         name: 'images'
       }
     }, {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/static/images`,
+        name: 'banner'
+      }
+    }, {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          // gatsby-remark-relative-images must go before gatsby-remark-images
-          `gatsby-remark-relative-images`, {
+          `gatsby-remark-relative-images`,
+          `gatsby-remark-normalize-paths`, {
             resolve: `gatsby-remark-images`,
             options: {}
           }
@@ -77,8 +83,7 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-emotion',
     'gatsby-plugin-catch-links',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-netlify-cms', {
+    'gatsby-plugin-react-helmet', {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: config.siteTitle,
