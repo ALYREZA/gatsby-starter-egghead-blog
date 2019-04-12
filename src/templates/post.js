@@ -1,57 +1,48 @@
-import React from 'react'
-import {graphql} from 'gatsby'
-import Img from 'gatsby-image'
-import MDXRenderer from 'gatsby-mdx/mdx-renderer'
-import SEO from 'components/SEO'
-import {css} from '@emotion/core'
-import Container from 'components/Container'
-import Layout from '../components/Layout'
-import {fonts} from '../lib/typography'
-import Share from '../components/Share'
-import config from '../../config/website'
-import {bpMaxSM} from '../lib/breakpoints'
+import React from 'react';
+import {graphql} from 'gatsby';
+import Img from 'gatsby-image';
+import MDXRenderer from 'gatsby-mdx/mdx-renderer';
+import SEO from 'components/SEO';
+import {css} from '@emotion/core';
+import Container from 'components/Container';
+import Layout from '../components/Layout';
+import {fonts} from '../lib/typography';
+import Share from '../components/Share';
+import config from '../../config/website';
+import {bpMaxSM} from '../lib/breakpoints';
 
-export default function Post({
-  data: {
-    site,
-    mdx
-  },
-  pageContext: {
-    next,
-    prev
-  }
-}) {
-  const author = mdx.frontmatter.author || config.author
-  const date = mdx.frontmatter.date
-  const title = mdx.frontmatter.title
-  const banner = mdx.frontmatter.banner
+export default function Post({data: {site, mdx}, pageContext: {next, prev}}) {
+  const author = mdx.frontmatter.author || config.author;
+  const date = mdx.frontmatter.date;
+  const title = mdx.frontmatter.title;
+  const banner = mdx.frontmatter.banner;
 
   return (
     <Layout site={site} frontmatter={mdx.frontmatter}>
-      <SEO frontmatter={mdx.frontmatter} isBlogPost/>
-      <article css={css ` width: 100%; display: flex;`}>
+      <SEO frontmatter={mdx.frontmatter} isBlogPost />
+      <article css={css` width: 100%; display: flex;`}>
         <Container>
-          <h1 css={css ` text-align: center; margin-bottom: 20px;direction: rtl; `}>
+          <h1
+            css={css` text-align: center; margin-bottom: 20px;direction: rtl; `}
+          >
             {title}
           </h1>
           <div
-            css={css ` display: flex; justify-content: center; margin-bottom: 20px; h3, span { text-align: center; font-size: 15px; opacity: 0.6; font-family: ${fonts.regular}, sans-serif; font-weight: normal; margin: 0 5px; } `}>
+            css={css` display: flex; justify-content: center; margin-bottom: 20px; h3, span { text-align: center; font-size: 15px; opacity: 0.6; font-family: ${fonts.regular}, sans-serif; font-weight: normal; margin: 0 5px; } `}
+          >
             {author && <h3>{author}</h3>}
             {author && <span>—</span>}
             {date && <h3>{date}</h3>}
           </div>
-          {banner && (
-            <div css={css ` padding: 30px; ${bpMaxSM} { padding: 0; } `}>
+          {banner &&
+            <div css={css` padding: 30px; ${bpMaxSM} { padding: 0; } `}>
               <Img
                 sizes={banner.childImageSharp.fluid}
-                alt={site
-                .siteMetadata
-                .keywords
-                .join(', ')}/>
-            </div>
-          )}
-          <br/>
-          <div css={css `text-align: right; direction: rtl; `}>
+                alt={site.siteMetadata.keywords.join (', ')}
+              />
+            </div>}
+          <br />
+          <div css={css`text-align: right; direction: rtl; `}>
             <MDXRenderer>
               {mdx.code.body}
             </MDXRenderer>
@@ -63,13 +54,14 @@ export default function Post({
         <Share
           url={`${config.siteUrl}/${mdx.frontmatter.slug}/`}
           title={title}
-          twitterHandle={config.twitterHandle}/>
-        <br/>
+          twitterHandle={config.twitterHandle}
+        />
+        <br />
       </Container>
     </Layout>
-  )
+  );
 }
-export const pageQuery = graphql ` query($id: String!) {site {
+export const pageQuery = graphql` query($id: String!) {site {
       ...site
     }
     mdx(fields : {
@@ -80,7 +72,7 @@ export const pageQuery = graphql ` query($id: String!) {site {
       frontmatter {
         title date(formatString : "MMMM DD, YYYY")author banner {
           childImageSharp {
-            fluid(maxWidth : 900) {
+            fluid(maxWidth : 720, traceSVG: {color: "#de4d44"}) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -89,4 +81,4 @@ export const pageQuery = graphql ` query($id: String!) {site {
       }
       code {body}
     }
-}`
+}`;

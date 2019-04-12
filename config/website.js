@@ -24,5 +24,5 @@ module.exports = {
   twitter: 'https://twitter.com/alyreza_/',
   twitterHandle: '@Alyreza_',
   github: 'https://github.com/Alyreza/',
-  linkedin: ''
-}
+  linkedin: '',
+};

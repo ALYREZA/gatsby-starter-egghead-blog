@@ -1,36 +1,36 @@
-import {darken, lighten} from 'polished'
-import {fonts} from '../src/lib/typography'
+import {darken, lighten} from 'polished';
+import {fonts} from '../src/lib/typography';
 
 const favColor = [
-  "#de4d44",
-  "#ff842a",
-  "#fc766a",
-  "#c83e74",
-  "#8d9440",
-  "#2e5d9f",
-  "#e7b7cf"
+  '#de4d44',
+  '#ff842a',
+  '#fc766a',
+  '#c83e74',
+  '#8d9440',
+  '#2e5d9f',
+  '#e7b7cf',
 ];
 
 const brand = {
   // primary: '#0078CC', primary: '#5348FF', primary: '#1ABC9C', primary:
   // '#D42210', primary: '#D96E0E', primary: '#9B59B6',
-  primary: favColor[Math.floor(Math.random() * favColor.length)],
+  primary: '#de4d44',
   //primary: '#6420E5',
-  secondary: '#EEF4F2'
-}
+  secondary: '#EEF4F2',
+};
 
 const colors = {
-  primary_light: `${lighten(0.55, brand.primary)}`,
+  primary_light: `${lighten (0.55, brand.primary)}`,
   gray: '#D3D3D3',
   black: '#000',
   white: '#fff',
   bg_color: '#fafafa',
   body_color: 'rgba(0,0,0,0.85)',
   link_color: brand.primary,
-  link_color_hover: `${darken(0.07, brand.primary)}`,
+  link_color_hover: `${darken (0.07, brand.primary)}`,
   red: '#E86C60',
-  green: '#29B573'
-}
+  green: '#29B573',
+};
 
 const theme = {
   colors,
@@ -40,19 +40,19 @@ const theme = {
     xs: '400px',
     s: '600px',
     m: '900px',
-    l: '1200px'
+    l: '1200px',
   },
   container: {
     base: '100rem',
-    text: '55rem'
+    text: '55rem',
   },
   spacer: {
     horizontal: '2rem',
-    vertical: '3rem'
+    vertical: '3rem',
   },
   transition: {
-    ease: 'all 200ms ease'
-  }
-}
+    ease: 'all 200ms ease',
+  },
+};
 
-export default theme
+export default theme;
