@@ -5,7 +5,6 @@ import {css} from '@emotion/core';
 import Container from 'components/Container';
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
-import theme from '../../config/theme';
 import Link from '../components/Link';
 import {bpMaxSM} from '../lib/breakpoints';
 
