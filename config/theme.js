@@ -1,21 +1,16 @@
 import {darken, lighten} from 'polished';
 import {fonts} from '../src/lib/typography';
 
-const favColor = [
-  '#de4d44',
-  '#ff842a',
-  '#fc766a',
-  '#c83e74',
-  '#8d9440',
-  '#2e5d9f',
-  '#e7b7cf',
-];
+// '#de4d44',
+// '#ff842a',
+// '#fc766a',
+// '#c83e74',
+// '#8d9440',
+// '#2e5d9f',
+// '#e7b7cf',
 
 const brand = {
-  // primary: '#0078CC', primary: '#5348FF', primary: '#1ABC9C', primary:
-  // '#D42210', primary: '#D96E0E', primary: '#9B59B6',
   primary: '#de4d44',
-  //primary: '#6420E5',
   secondary: '#EEF4F2',
 };
 
@@ -25,11 +20,11 @@ const colors = {
   black: '#000',
   white: '#fff',
   bg_color: '#fafafa',
-  body_color: 'rgba(0,0,0,0.85)',
+  body_color: '#222426',
   link_color: brand.primary,
   link_color_hover: `${darken (0.07, brand.primary)}`,
-  red: '#E86C60',
-  green: '#29B573',
+  red: '#E75248',
+  green: '#17A974',
 };
 
 const theme = {
