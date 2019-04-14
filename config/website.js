@@ -14,7 +14,7 @@ module.exports = {
   userTwitter: '@Alyreza_', // Twitter Username
   ogSiteName: 'صفحه شخصی علیرضا محمودی', // Facebook Site Name
   ogLanguage: 'fa_IR',
-  googleAnalyticsID: '',
+  googleAnalyticsID: 'UA-74906216-1',
 
   // Manifest and Progress color
   themeColor: '#de4d44',
@@ -24,5 +24,5 @@ module.exports = {
   twitter: 'https://twitter.com/alyreza_/',
   twitterHandle: '@Alyreza_',
   github: 'https://github.com/Alyreza/',
-  linkedin: '',
+  linkedin: ''
 };
