@@ -24,5 +24,7 @@ module.exports = {
   twitter: 'https://twitter.com/alyreza_/',
   twitterHandle: '@Alyreza_',
   github: 'https://github.com/Alyreza/',
-  linkedin: ''
-};
+  youtube: 'https://www.youtube.com/channel/UCMGaU1X7J2d4TQ57JTc4KyQ',
+  aparat: 'https://www.aparat.com/alyreza_',
+  linkedin: '',
+}
